@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabla HTML con celdas combinadas, ejemplo educativo de estructura con rowspan y colspan.">
+    <meta name="author" content="Tu Nombre">
+    <title>Ejemplo de Tabla con Rowspan y Colspan</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #999;
+            text-align: center;
+            vertical-align: middle;
+            padding: 20px;
+            background-color: #e0e0e0; /* Color gris claro como en la imagen */
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Ejemplo de Tabla con Celdas Combinadas</h2>
+
+<table>
+    <tr>
+        <td rowspan="2">A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+    </tr>
+    <tr>
+        <td rowspan="2">F</td>
+        <td colspan="2">G, H</td>
+    </tr>
+    <tr>
+        <td rowspan="2">E, I</td>
+        <td rowspan="2">J</td>
+        <td rowspan="2">K, O</td>
+        <td rowspan="2">L</td>
+    </tr>
+    <tr>
+        <td>M</td>
+        <td>N</td>
+        <td>P</td>
+    </tr>
+</table>
+
+</body>
+</html>
