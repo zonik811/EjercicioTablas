@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tabla 4x4 con uniones  los tres tipos de listas HTML.">
+    <meta name="author" content="Oscar Cubillos">
+    <title>Tabla 4x4 con Listas y Uniones</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #333;
+            text-align: left;
+            vertical-align: top;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        ul, ol, dl {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tabla 4x4 con Uniones y Tipos de Listas</h2>
+
+<table>
+    <tr>
+        <td>1</td>
+        <td>
+            <strong>Lista Ordenada (ol):</strong>
+            <ol>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+        </td>
+        <td rowspan="2">56 y 60 </td> 
+        <td>7</td>
+    </tr>
+    <tr>
+        <td colspan="2">7, 8 y 9</td>
+
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>
+            <strong>Lista Desordenada (ul):</strong>
+            <ul>
+                <li>50</li>
+                <li>40</li>
+                <li>30</li>
+            </ul>
+        </td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td colspan="2">14 y 15 </td> 
+        <td>16</td>
+        <td>
+            <strong>Lista de Definición (dl):</strong>
+            <dl>
+                <dt>100</dt>
+                <dd>Definición 1</dd>
+                <dt>200</dt>
+                <dd>Definición 2</dd>
+                <dt>300</dt>
+                <dd>Definición 3</dd>
+            </dl>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
