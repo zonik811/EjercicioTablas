@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Etiquetas HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, article, section, aside, footer {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+    }
+    nav button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .tab-content {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    nav {
+      background-color: #f0f0f0;
+    }
+    footer {
+      text-align: center;
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Guía de Ejemplos de Etiquetas HTML</h1>
+</header>
+
+<nav>
+  <button onclick="showTab('a')">&lt;a&gt;</button>
+  <button onclick="showTab('p')">&lt;p&gt;</button>
+  <button onclick="showTab('img')">&lt;img&gt;</button>
+  <button onclick="showTab('div')">&lt;div&gt;</button>
+  <button onclick="showTab('span')">&lt;span&gt;</button>
+  <button onclick="showTab('strong')">&lt;strong&gt;</button>
+  <button onclick="showTab('em')">&lt;em&gt;</button>
+  <button onclick="showTab('form')">&lt;form&gt;</button>
+  <button onclick="showTab('fieldset')">&lt;fieldset&gt;</button>
+  <button onclick="showTab('legend')">&lt;legend&gt;</button>
+  <button onclick="showTab('input')">&lt;input&gt;</button>
+  <button onclick="showTab('label')">&lt;label&gt;</button>
+  <button onclick="showTab('textarea')">&lt;textarea&gt;</button>
+  <button onclick="showTab('button')">&lt;button&gt;</button>
+</nav>
+
+<article>
+
+  <section id="a" class="tab-content">
+    <h2>Etiqueta a</h2>
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+  </section>
+
+  <section id="p" class="tab-content">
+    <h2>Etiqueta p</h2>
+    <p>Este es un párrafo de ejemplo.</p>
+  </section>
+
+  <section id="img" class="tab-content">
+    <h2>Etiqueta img</h2>
+    <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+  </section>
+
+  <section id="div" class="tab-content">
+    <h2>Etiqueta div</h2>
+    <div style="background-color:lightblue; padding:10px;">DIV</div>
+    <div style="background-color:rgb(173, 230, 183); padding:10px;">DIV</div>
+  </section>
+
+  <section id="span" class="tab-content">
+    <h2>Etiqueta span</h2>
+    <p>Texto con un <span style="color:red;">span rojo</span> dentro del párrafo.</p>
+  </section>
+
+  <section id="strong" class="tab-content">
+    <h2>Etiqueta strong</h2>
+    <p>Este texto es <strong>muy importante</strong>.</p>
+  </section>
+
+  <section id="em" class="tab-content">
+    <h2>Etiqueta em</h2>
+    <p>Este texto está <em>enfatizado</em>.</p>
+  </section>
+
+  <section id="form" class="tab-content">
+    <h2>Etiqueta form</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"><br><br>
+      <textarea placeholder="Text Here"></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="fieldset" class="tab-content">
+    <h2>Etiqueta fieldset</h2>
+    <form>
+      <fieldset>
+        <legend>Información Personal</legend>
+        <label>Nombre:</label>
+        <input type="text">
+      </fieldset>
+    </form>
+  </section>
+
+  <section id="legend" class="tab-content">
+    <h2>Etiqueta legend</h2>
+    <form>
+      <fieldset>
+        <legend>Datos</legend>
+        <label>Email:</label>
+        <input type="email">
+      </fieldset>
+      
+    </form>
+  </section>
+
+  <section id="input" class="tab-content">
+    <h2>Etiqueta input</h2>
+    <input type="text" placeholder="Caja de texto">
+  </section>
+
+  <section id="label" class="tab-content">
+    <h2>Etiqueta label</h2>
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo">
+  </section>
+
+  <section id="textarea" class="tab-content">
+    <h2>Etiqueta textarea</h2>
+    <textarea rows="4" cols="30">TextArea...</textarea>
+  </section>
+
+  <section id="button" class="tab-content">
+    <h2>Etiqueta button</h2>
+    <button onclick="alert('¡Hola Mundo!')">Haz clic aquí</button>
+  </section>
+</article>
+
+<aside>
+  <p>Aside.</p>
+</aside>
+
+<footer>
+  <p>Ejercicio HTML BASICO</p>
+</footer>
+
+<script>
+  function showTab(tabId) {
+    const allTabs = document.querySelectorAll('.tab-content');
+    allTabs.forEach(tab => tab.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
