@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Perfil de Desarrollador - Oscar Mauricio Cubillos Murcia</title>
 </head>
+
 <body>
 
     <header>
         <h1>Perfil Profesional de Oscar Mauricio Cubillos Murcia</h1>
-        <p><strong>Ingeniero de Software</strong> graduado de la <em>Universidad Manuela Beltran</em> en <strong>2021</strong>.</p>
+        <p><strong>Ingeniero de Software</strong> graduado de la <em>Universidad Manuela Beltran</em> en
+            <strong>2021</strong>.</p>
     </header>
 
     <nav>
@@ -102,29 +105,35 @@
         <h2>Proyectos Destacados</h2>
         <article>
             <h3>Proyecto de Nómina y ERP</h3>
-            <p>Desarrollado en <strong>Flask</strong> y <strong>Next.js</strong> para la empresa <em>P&M Engineering</em>.</p>
+            <p>Desarrollado en <strong>Flask</strong> y <strong>Next.js</strong> para la empresa <em>P&M
+                    Engineering</em>.</p>
         </article>
         <article>
             <h3>Automatización de Procesos en Banco Av Villas</h3>
-            <p>Optimización de procesos bancarios utilizando <strong>COBOL</strong> y herramientas como <em>Control-M</em>.</p>
+            <p>Optimización de procesos bancarios utilizando <strong>COBOL</strong> y herramientas como
+                <em>Control-M</em>.</p>
         </article>
     </section>
 
     <section id="ubicacion">
         <h2>Ubicación de Mi Universidad</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d63628.19321445875!2d-74.064846!3d4.6364834!3m2!1i1024!2i768!4f13.1!2m1!1suniversidad%20manuela%20beltran!5e0!3m2!1sen!2sco!4v1751038276772!5m2!1sen!2sco" width="300" height="200"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d63628.19321445875!2d-74.064846!3d4.6364834!3m2!1i1024!2i768!4f13.1!2m1!1suniversidad%20manuela%20beltran!5e0!3m2!1sen!2sco!4v1751038276772!5m2!1sen!2sco"
+            width="300" height="200"></iframe>
     </section>
 
     <section id="frase">
         <h2>BlockQuote</h2>
         <blockquote>
-            "La programación es el arte de traducir ideas en código funcional."
+            "Cita Lorem Impsum."
         </blockquote>
     </section>
 
     <section>
         <h2>Tecnologías que manejo</h2>
-        <p>Manejo: <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="JavaScript">JS</abbr>, <abbr title="Structured Query Language">SQL</abbr> y <abbr title="Common Business Oriented Language">COBOL</abbr>.</p>
+        <p>Manejo: <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>,
+            <abbr title="JavaScript">JS</abbr>, <abbr title="Structured Query Language">SQL</abbr> y <abbr
+                title="Common Business Oriented Language">COBOL</abbr>.</p>
     </section>
 
 
@@ -154,8 +163,10 @@
 
     <section id="formulario">
         <h2>Formulario de Actualización de Perfil</h2>
-        <form>
+
+        <form action="#" method="post" enctype="multipart/form-data">
             <h3>Editar Datos Personales:</h3>
+
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" value="Oscar Mauricio"><br><br>
 
@@ -172,14 +183,49 @@
             <input type="text" id="universidad" name="universidad" value="Manuela Beltran"><br><br>
 
             <label for="ano">Año de Graduación:</label><br>
-            <input type="text" id="ano" name="ano" value="2021"><br><br>
+            <select id="ano" name="ano">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select><br><br>
 
-            <h3>Mensaje o Comentarios:</h3>
-            <textarea name="comentarios" rows="4" cols="40">Observaciones...</textarea><br><br>
 
-            <input type="submit" value="Guardar Cambios">
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="telefono">Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+
+            <label for="certificaciones">Certificaciones:</label><br>
+            <textarea id="certificaciones" name="certificaciones" rows="4"
+                cols="40">Full Stack Platzi ...</textarea><br><br>
+
+            <p><strong>Disponibilidad para trabajar:</strong></p>
+            <input type="radio" id="disponible" name="disponibilidad" value="Disponible">
+            <label for="disponible">Disponible</label><br>
+
+            <input type="radio" id="no_disponible" name="disponibilidad" value="No Disponible">
+            <label for="no_disponible">No Disponible</label><br><br>
+
+            <p><strong>Areas de interes:</strong></p>
+            <input type="checkbox" id="backend" name="interes" value="Backend">
+            <label for="backend">Backend</label><br>
+
+            <input type="checkbox" id="frontend" name="interes" value="Frontend">
+            <label for="frontend">Frontend</label><br>
+
+            <input type="checkbox" id="data" name="interes" value="Data">
+            <label for="data">Data Engineering</label><br><br>
+            <label for="hv">Adjuntar Hoja de Vida:</label><br>
+            <input type="file" id="hv" name="hoja_vida"><br><br>
+            <button type="submit" formmethod="get">Enviar con GET</button>
+            <button type="submit">Enviar con POST</button>
+
         </form>
     </section>
-
 </body>
+
 </html>
