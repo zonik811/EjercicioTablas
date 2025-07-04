@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Guerra en HD</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="contenedor-principal">
+    <h1>La Guerra en HD</h1>
+
+    <div class="zona-principal">
+      <!-- IZQUIERDA -->
+      <div class="columna-izquierda">
+        <!-- FORMULARIO SUBMARINO -->
+<div class="formulario" id="form-submarino">
+  <h3>Formulario de definición de vida y el poder del submarino</h3>
+  <div class="form-row">
+    <img src="img/submarino.png" alt="Submarino" width="80" height="60" />
+    <label for="vida-submarino">Vida del Submarino:</label>
+  </div>
+  <input type="number" id="vida-submarino" min="1" value="2500" /><br />
+
+  <div class="form-row">
+    <img src="img/submarino.png" alt="Submarino" width="80" height="60" />
+    <label for="ataque-submarino">Ataque del Submarino:</label>
+  </div>
+  <input type="number" id="ataque-submarino" min="1" value="500" /><br />
+</div>
+
+<!-- FORMULARIO VIDA POR FRACCIÓN -->
+<div class="formulario" id="form-fraccion-vida">
+  <h3>Formulario de definición de cálculo de vida</h3>
+
+  <div class="form-row">
+    <img src="img/soldado_regular.png" width="80" height="60" />
+    <label for="soldado_regular">Soldado Regular:</label>
+  </div>
+  <input type="text" name="soldado_regular" value="2/12"><br>
+
+  <div class="form-row">
+    <img src="img/soldado_profesional.png" width="80" height="60" />
+    <label for="soldado_profesional">Soldado Profesional:</label>
+  </div>
+  <input type="text" name="soldado_profesional" value="3/12"><br>
+
+  <div class="form-row">
+    <img src="img/soldado_elite.png" width="80" height="60" />
+    <label for="soldado_elite">Soldado Élite:</label>
+  </div>
+  <input type="text" name="soldado_elite" value="4/12"><br>
+
+  <div class="form-row">
+    <img src="img/carro_tanque.png" width="80" height="60" />
+    <label for="carroTanque">Carro Tanque:</label>
+  </div>
+  <input type="text" name="carroTanque" value="7/12"><br>
+
+  <div class="form-row">
+    <img src="img/helicoptero.png" width="80" height="60" />
+    <label for="helicoptero">Helicóptero:</label>
+  </div>
+  <input type="text" name="helicoptero" value="8/12"><br>
+
+  <div class="form-row">
+    <img src="img/avion_combate.png" width="80" height="60" />
+    <label for="avion_combate">Avión de Combate:</label>
+  </div>
+  <input type="text" name="avion_combate" value="10/12"><br>
+
+  <div class="form-row">
+    <img src="img/submarino.png" width="80" height="60" />
+    <label for="submarino">Submarino:</label>
+  </div>
+  <input type="text" name="submarino" value="12/12"><br>
+</div>
+
+      </div>
+
+      <!-- CENTRO -->
+      <div class="columna-centro">
+        <p>Información de los Ejércitos, cantidad de unidades vivas</p>
+        <div id="info-ejercitos"></div>
+      </div>
+
+      <!-- DERECHA -->
+      <div class="columna-derecha">
+        <p>Log de turnos y el Informe Final</p>
+        <div id="log-guerra"></div>
+      </div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="zona-botones">
+      <button class="crear-btn">Crear Ejércitos</button>
+      <button class="fight-btn">Fight!</button>
+      <button class="nueva-btn">Nueva Guerra</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

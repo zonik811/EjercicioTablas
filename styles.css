@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+.zona-principal {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.columna-izquierda,
+.columna-centro,
+.columna-derecha {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.columna-izquierda {
+  background-color: #f9e0b3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario {
+  background-color: #cce7f2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.columna-centro,
+.columna-derecha {
+  background-color: #f5cccc;
+}
+
+.columna-centro p,
+.columna-derecha p {
+  text-align: center;
+  margin-top: 30%;
+  color: #333;
+}
+
+.zona-botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.zona-botones button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.crear-btn {
+  background-color: #e0bbf2;
+}
+
+.fight-btn {
+  background-color: #f24646;
+  color: white;
+}
+
+.nueva-btn {
+  background-color: #9ed8f0;
+}
+
+.tabla-ejercito td img {
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.tabla-ejercito {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tabla-ejercito th,
+.tabla-ejercito td {
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.tabla-ejercito th {
+  background-color: #ddd;
+}
+
+/* Contenedor general del log */
+#log-guerra {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+}
+
+/* Grupo de turnos */
+.grupo-turnos {
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.grupo-turnos summary {
+  padding: 8px 12px;
+  background-color: #f3f8ff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+.grupo-turnos summary:hover {
+  background-color: #e6f0ff;
+}
+
+/* Turno individual */
+.turno-log {
+  margin: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.turno-log summary {
+  padding: 6px 10px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  transition: background 0.2s ease;
+}
+.turno-log summary:hover {
+  background-color: #eee;
+}
+
+/* Subtipo de unidad (por tipo de atacante) */
+.subtipo-log {
+  margin: 6px 15px;
+  border: 1px dashed #bbb;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.subtipo-log summary {
+  padding: 4px 10px;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtipo-log summary:hover {
+  background-color: #f0f0f0;
+}
+
+/* Tablas pequeñas de combate */
+.mini-log-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0 12px 0;
+  font-size: 13px;
+}
+
+.mini-log-tabla th, .mini-log-tabla td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.mini-log-tabla th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+/* Estilo general para las tablas */
+table.tabla-estadisticas,
+table.mini-log-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table.tabla-estadisticas th,
+table.tabla-estadisticas td,
+table.mini-log-tabla th,
+table.mini-log-tabla td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+table.tabla-estadisticas thead,
+table.mini-log-tabla thead {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Alternancia de colores por fila */
+table.tabla-estadisticas tbody tr:nth-child(even),
+table.mini-log-tabla tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Colores suaves al pasar el mouse */
+table.tabla-estadisticas tbody tr:hover,
+table.mini-log-tabla tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Responsive (opcional si usas media queries) */
+@media (max-width: 600px) {
+  table.tabla-estadisticas,
+  table.mini-log-tabla {
+    font-size: 12px;
+  }
+}
+/* Contenedor principal del informe */
+#log-guerra > div {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  color: #333;
+}
+
+/* Secciones con detalles (estadísticas, subgrupos) */
+#log-guerra details {
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  margin: 12px 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+/* Títulos de sección */
+#log-guerra summary {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #2b4f81;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+/* Tabla de estadísticas */
+.tabla-estadisticas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.tabla-estadisticas th, .tabla-estadisticas td {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.tabla-estadisticas th {
+  background-color: #f0f4fa;
+  font-weight: 600;
+}
+
+.tabla-estadisticas td {
+  background-color: #fff;
+}
+
+/* Íconos en titles */
+#log-guerra summary strong {
+  font-size: 1.1rem;
+  color: #234;
+}
+
+/* Subgrupos (ej: Tropas Perdidas, Vivas, etc.) */
+.subtipo-log {
+  margin-top: 10px;
+  background-color: #eef6fd;
+  border: 1px solid #cce4f7;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Tablas dentro de subtipo-log */
+.subtipo-log table {
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+}
+
+.subtipo-log th {
+  background-color: #ddeeff;
+  color: #2a4c6a;
+}
+
+.subtipo-log td {
+  background-color: #f9fcff;
+}
+
+/* Grupo de turnos */
+.grupo-turnos {
+  border: 1px dashed #aaa;
+  padding: 10px;
+  background-color: #fcfcfc;
+  margin-bottom: 12px;
+}
+
+/* Pequeños detalles en lista */
+#log-guerra li {
+  margin: 4px 0;
+}
