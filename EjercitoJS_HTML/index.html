@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Guerra en HD</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="contenedor-principal">
+    <h1>La Guerra en HD</h1>
+
+    <div class="zona-principal">
+      <!-- PARTE IZQUIERDA -->
+      <div class="columna-izquierda">
+        <!-- ABRE FORM SUBMARINO -->
+        <div class="formulario" id="form-submarino">
+         <h3>Formulario de definición de vida y el poder del submarino</h3>
+         <!-- DIV IMAGEN VIDA -->
+         <div class="form-row">
+           <img src="img/submarino.png" alt="Submarino" width="40" height="40" />
+           <label for="vida-submarino">Vida del Submarino:</label>
+         </div>
+         <input type="number" id="vida-submarino" min="1" value="2500" /><br />
+         <!-- DIV IMAGEN ATAQUE -->
+         <div class="form-row">
+           <img src="img/submarino.png" alt="Submarino" width="40" height="40" />
+           <label for="ataque-submarino">Ataque del Submarino:</label>
+         </div>
+         <input type="number" id="ataque-submarino" min="1" value="500" /><br />
+         <!-- BOTON GUARDAR -->
+         <button id="btn-guardar-submarino" class="btn btn-success w-100 btn-sm">Guardar Submarino</button>
+         <!-- CIERRA FORM SUBMARINO -->
+        </div>
+
+        <!-- FORMULARIO VIDA UNIDADES -->
+        <div class="formulario" id="form-fraccion-vida">
+         <h3>Formulario de definición vida por unidades</h3>
+         <!-- SOLDADO REGULAR -->
+         <div class="form-row">
+           <img src="img/soldado_regular.png" width="40" height="40" />
+           <label for="soldado_regular">Soldado Regular:</label>
+         </div>
+         <input type="text" name="soldado_regular" value="2/12"><br>
+         <!-- SOLDADO PROFESIONAL -->
+         <div class="form-row">
+            <img src="img/soldado_profesional.png" width="40" height="40" />
+            <label for="soldado_profesional">Soldado Profesional:</label>
+         </div>
+         <input type="text" name="soldado_profesional" value="3/12"><br>
+         <!-- SOLDADO ELITE -->
+         <div class="form-row">
+           <img src="img/soldado_elite.png" width="40" height="40" />
+           <label for="soldado_elite">Soldado Elite:</label>
+         </div>
+         <input type="text" name="soldado_elite" value="4/12"><br>
+         <!-- CARRO TANQUE -->
+         <div class="form-row">
+           <img src="img/carro_tanque.png" width="40" height="40" />
+           <label for="carroTanque">Carro Tanque:</label>
+         </div>
+         <input type="text" name="carroTanque" value="7/12"><br>
+         <!-- HELICOPTERO -->
+         <div class="form-row">
+           <img src="img/helicoptero.png" width="40" height="40" />
+           <label for="helicoptero">Helicoptero:</label>
+         </div>
+         <input type="text" name="helicoptero" value="8/12"><br>
+         <!-- AVION -->
+         <div class="form-row">
+           <img src="img/avion_combate.png" width="40" height="40" />
+           <label for="avion_combate">Avion de Combate:</label>
+         </div>
+         <input type="text" name="avion_combate" value="10/12"><br>
+         <!-- SUBMARINO -->
+         <div class="form-row">
+           <img src="img/submarino.png" width="40" height="40" />
+           <label for="submarino">Submarino:</label>
+         </div>
+         <input type="text" name="submarino" value="12/12"><br>
+                  <!-- BOTON GUARDAR -->
+         <button id="btn-guardar-fracciones" class="btn btn-primary w-100 btn-sm">Guardar Calculo de Vida</button>
+
+        </div>
+
+      </div>
+
+      <!-- DIVG CENTRO -->
+      <div class="columna-centro">
+        <p>Información de los Ejércitos, cantidad de unidades vivas</p>
+        <div id="info-ejercitos"></div>
+      </div>
+
+      <!--DIV  DERECHA -->
+      <div class="columna-derecha">
+        <p>Log de turnos y el Informe Final</p>
+        <div id="log-guerra"></div>
+      </div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="zona-botones">
+      <button class="crear-btn">Crear Ejércitos</button>
+      <button class="fight-btn">Pelea!</button>
+      <button class="nueva-btn">Nueva Guerra</button>
+    </div>
+  </div>
+<!-- CIERRA ZONA PRINCIPAL -->
+
+<!-- TOAST ESTADOS -->
+<div id="toast-zone"
+     class="position-fixed bottom-0 end-0 p-3"
+     style="z-index: 1100;">
+  <!-- Toast submarino -->
+  <div id="toast-submarino"
+       class="toast align-items-center text-bg-success border-0"
+       role="alert" aria-live="assertive" aria-atomic="true"
+       data-bs-delay="2000">
+    <div class="d-flex">
+      <div class="toast-body">
+        Datos del submarino actualizados 
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+    </div>
+  </div>
+<!-- TOAST 2  -->
+  <div id="toast-fracciones"
+       class="toast align-items-center text-bg-primary border-0"
+       role="alert" aria-live="assertive" aria-atomic="true"
+       data-bs-delay="2000">
+    <div class="d-flex">
+      <div class="toast-body">
+        Calculo de vida actualizado 
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto"data-bs-dismiss="toast" aria-label="Cerrar"></button>
+    </div>
+  </div>
+</div>
+<!-- CIERRA TOAST -->
+
+  <script type="module" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
