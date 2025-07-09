@@ -144,7 +144,7 @@ tpl.innerHTML = /* html */`
   </table>
 </div>
 
-<div class="error" hidden>NO SE ENCONTRÓ EL POKÉMON</div>
+<div class="error" hidden>NO SE ENCONTRO EL POKEMON</div>
 `;
 
 
